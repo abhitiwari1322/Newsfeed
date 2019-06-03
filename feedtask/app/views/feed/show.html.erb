@@ -1,0 +1,14 @@
+<h1><%= @feed.title %></h1>
+
+<p>
+   
+<strong>Category: </strong> <%= link_to @feed.category.title,
+:action => "show_categories", :id => @feed.category.id %><br />
+   <strong>Created Date:</strong> <%= @feed.created_at %><br />
+</p>
+
+<p><%= @feed.text %></p>
+
+<hr />
+
+<%= link_to 'Back', {:action => 'list'} %>

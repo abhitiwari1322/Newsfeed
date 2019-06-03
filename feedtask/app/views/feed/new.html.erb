@@ -1,0 +1,17 @@
+<h1>Add new Blog</h1>
+
+<%= form_tag :action => 'create' do %>
+<p><label for = "feed_title">Title</label>:
+
+<%= text_field 'feeds', 'title' %></p>
+<p><label for = "feed_text">Description</label>:
+
+<%= text_field 'books', 'text' %></p>
+<p><label for = "feed_category_id">Category</label>:
+
+<%= collection_select(:feeds, :category_id, @categories, :id, :title, prompt: true) %></p>
+
+<%= submit_tag "Create" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'list'} %>
