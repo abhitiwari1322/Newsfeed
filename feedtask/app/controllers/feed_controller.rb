@@ -36,7 +36,7 @@ class FeedController < ApplicationController
     end
     def update
         @feed = Feed.find(params[:id])
-
+ 
         if @feed.update_attributes(feed_param)
             redirect_to :action => 'show', :id => @feed
         else
