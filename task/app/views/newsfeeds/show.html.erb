@@ -1,0 +1,14 @@
+
+<h1><%= @newsfeed.title %></h1>
+
+<p>
+   <strong>About: </strong> $<%= @book.text%><br />
+   <strong>Category :</strong> <%= @newsfeed.category.title %><br />
+   <strong>Created Date:</strong> <%= @newsfeed.created_at %><br />
+</p>
+
+<p><%= @newsfeed.text %></p>
+
+<hr />
+
+<%= link_to 'Back', {:action => 'index'} %>

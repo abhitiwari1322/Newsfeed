@@ -1,0 +1,17 @@
+<h1>Add new Feeds</h1>
+<%= render 'form', newsfeed: @newsfeed %>
+<%= form_tag :action => 'create' do %>
+<p><label for = "newsfeed_title">Title</label>:
+
+<%= text_field 'newsfeeds', 'title' %></p>
+
+<p><label for = "newsfeed_category_id">Category</label>:
+
+<%= collection_select(:newsfeeds, :category_id, @categories, :id, :title, prompt: true) %></p>
+<p><label for = "newsfeed_text">Description</label><br/>
+
+<%= text_area 'newsfeeds', 'text' %></p>
+<%= submit_tag "Create" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'index'} %>
